@@ -47,6 +47,18 @@ Once the code is compiled, you can deploy the contract by clicking on the "Deplo
 
 Once the contract is deployed, you can interact with it.
 
+# Functions Of Error Handlers
+* Require
+>"require": is used in the setValue function to validate the input and ensure that the contract's state is updated correctly and securely.
+The setValue function takes one argument _newValue of type uint256. The function includes two require statements to validate the input value. The first require statement checks if the caller of the function is the owner of the contract. If the caller is not the owner, the function will revert and the state of the contract will not be updated. The error message "The User is not the Owner" will be displayed to the user.
+* Assert
+
+>"assertFunction(uint256 _num)": This function takes one argument _num of type uint256 and returns it. It includes an assert statement to ensure that the input value is not zero. If the input value is zero, the function will throw an exception and the state of the contract will not be updated.
+
+* Revert
+>"revertFunction(uint256 _num)": This function takes one argument _num of type uint256 and returns it. It includes an if statement to check if the input value is zero. If the input value is zero, the function will revert with a custom error message and the state of the contract will not be updated.
+
+
 
 # Authors
 Keana Aliza C. Perez
